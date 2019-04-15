@@ -1,0 +1,76 @@
+{
+  "name": "bus-ucsal",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "mobx": "^5.9.4",
+    "mobx-react": "^5.4.3",
+    "native-base": "^2.12.1",
+    "react": "16.8.3",
+    "react-native": "0.59.4",
+    "react-native-gesture-handler": "^1.1.0",
+    "react-navigation": "^3.7.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/runtime": "^7.4.3",
+    "@types/enzyme": "^3.9.1",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.11",
+    "@types/react": "^16.8.13",
+    "@types/react-native": "^0.57.43",
+    "@types/react-test-renderer": "^16.8.1",
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/parser": "^1.6.0",
+    "babel-jest": "^24.7.1",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.7.1",
+    "jest-fetch-mock": "^2.1.2",
+    "metro-react-native-babel-preset": "^0.53.1",
+    "prettier": "^1.17.0",
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "16.8.3",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.3"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.jest.json"
+      }
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "modulePaths": [
+      "<rootDir>"
+    ],
+    "setupFiles": [
+      "./src/tests/setup.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|react-clone-referenced-element|@expo(nent)?/.*|@react-navigation|react-navigation|react-native-gesture-handler|native-base|rn-placeholder|instabug-reactnative))"
+    ]
+  }
+}
