@@ -1,14 +1,10 @@
 version: 2
 jobs:
-  test:
+  build:
     docker:
       - image: circleci/node
     steps:
       - checkout
-      - run: echo "Testing..."
-      - run: yarn test
-
-workflows:
-  version: 2
-  tests:
-    - test
+      - run: | 
+        echo "Testing..."
+        yarn test
