@@ -2,9 +2,9 @@ import Enzyme from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
 jest.mock("react-navigation", () => ({
-  FlatList: Comp => Comp,
-  ScrollView: Comp => Comp,
-  SectionList: Comp => Comp,
+  FlatList: Component => Component,
+  ScrollView: Component => Component,
+  SectionList: Component => Component,
   BottomTabBar: require.requireActual("react-navigation").BottomTabBar,
   createAppContainer: jest.fn().mockImplementation(Comp => Comp),
   createStackNavigator: jest
@@ -25,8 +25,8 @@ jest.mock("react-navigation", () => ({
       .mockImplementation(x => ({ ...x, type: "Navigation/REPLACE" })),
   },
   NavigationActions: { navigate: jest.fn().mockImplementation(props => props) },
-  SafeAreaView: Comp => Comp,
-  HeaderTitle: Comp => Comp,
+  SafeAreaView: Component => Component,
+  HeaderTitle: Component => Component,
   Header: { HEIGHT: 64 },
 }));
 

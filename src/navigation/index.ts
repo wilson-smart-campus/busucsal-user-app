@@ -1,10 +1,17 @@
 import { createAppContainer, createSwitchNavigator } from "react-navigation";
 import AuthFlow from "./Auth";
+import AppFlow from "./App";
 
-const AppFlow = createSwitchNavigator({
-  Auth: AuthFlow
-});
+const AppSwitch = createSwitchNavigator(
+  {
+    Auth: AuthFlow,
+    App: AppFlow,
+  },
+  {
+    initialRouteName: "App",
+  },
+);
 
-const MainAppRoute = createAppContainer(AppFlow);
+export const MainAppContainer = createAppContainer(AppSwitch);
 
-export default MainAppRoute;
+export default MainAppContainer;

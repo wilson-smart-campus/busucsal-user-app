@@ -1,5 +1,5 @@
 {
-  "name": "bus-ucsal",
+  "name": "@wilson/bus-ucsal",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,12 +7,15 @@
     "test": "jest"
   },
   "dependencies": {
+    "@types/react-native-vector-icons": "^6.4.0",
     "mobx": "^5.9.4",
     "mobx-react": "^5.4.3",
-    "native-base": "^2.12.1",
     "react": "16.8.3",
     "react-native": "0.59.4",
     "react-native-gesture-handler": "^1.1.0",
+    "react-native-maps": "^0.24.2",
+    "react-native-paper": "^2.15.2",
+    "react-native-vector-icons": "^6.4.2",
     "react-navigation": "^3.7.1"
   },
   "devDependencies": {
