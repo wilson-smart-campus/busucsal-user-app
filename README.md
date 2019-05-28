@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/wilson-smart-campus/busucsal-user-app.svg?style=svg)](https://circleci.com/gh/wilson-smart-campus/busucsal-user-app)
+
 # Welcome to BusUcsal APP! 
 
 ![enter image description here](https://static1.squarespace.com/static/500d7112e4b0a738c57eaa53/t/5c069ea54d7a9cad0f329048/1543937712838/bus.gif)
