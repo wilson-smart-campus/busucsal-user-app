@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "lint": "tslint 'src/**/*.{ts,tsx}' "
   },
   "dependencies": {
     "@types/react-native-vector-icons": "^6.4.0",
@@ -16,7 +17,8 @@
     "react-native-maps": "^0.24.2",
     "react-native-paper": "^2.15.2",
     "react-native-vector-icons": "^6.4.2",
-    "react-navigation": "^3.7.1"
+    "react-navigation": "^3.7.1",
+    "tslint": "^5.16.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
@@ -44,6 +46,8 @@
     "react-dom": "^16.8.6",
     "react-test-renderer": "16.8.3",
     "ts-jest": "^24.0.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^4.0.0",
     "typescript": "^3.4.3"
   },
   "jest": {

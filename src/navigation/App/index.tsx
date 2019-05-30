@@ -16,18 +16,19 @@ export enum APP_FLOW_ROUTES {
 const AppFlow = createBottomTabNavigator(
   {
     Home: {
-      screen: Home,
       navigationOptions: ({ navigation }: NavigationScreenProps<{}>) => ({
-        title: "Roteiros",
         tabBarIcon: <Icon name="bus-clock" size={24} />,
+        title: "Roteiros",
       }),
+      screen: Home,
     },
+    // tslint:disable-next-line: object-literal-sort-keys
     BusMap: {
-      screen: BusMap,
       navigationOptions: ({ navigation }: NavigationScreenProps<{}>) => ({
-        title: "BusUcsal",
         tabBarIcon: <Icon name="map-marker" size={24} />,
+        title: "BusUcsal",
       }),
+      screen: BusMap,
     },
   },
   {

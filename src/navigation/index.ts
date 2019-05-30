@@ -4,8 +4,8 @@ import AppFlow from "./App";
 
 const AppSwitch = createSwitchNavigator(
   {
-    Auth: AuthFlow,
     App: AppFlow,
+    Auth: AuthFlow,
   },
   {
     initialRouteName: "App",

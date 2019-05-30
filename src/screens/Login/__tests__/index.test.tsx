@@ -37,8 +37,8 @@ describe("Login Screen", () => {
 
       wrapper.setState({
         email: "issoae",
-        password: "elemsm",
         isDisabled: false,
+        password: "elemsm",
       });
 
       const button = wrapper.find(Button).last();
@@ -47,7 +47,7 @@ describe("Login Screen", () => {
   });
 
   describe("behavior", () => {
-    //Check if login is called
+    // Check if login is called
     it("should call auth service on button press", () => {
       const wrapper = shallow(<Login />);
     });

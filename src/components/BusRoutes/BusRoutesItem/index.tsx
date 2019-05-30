@@ -1,6 +1,5 @@
 import * as React from "react";
 import { List, Divider } from "react-native-paper";
-import { Route } from "../../../types/Route";
 
 export interface IBusRoutesItemProps {
   routeHour: string;

@@ -6,9 +6,7 @@ import {
 } from "react-native";
 import styles from "../../resources/styles";
 
-interface IProps extends ActivityIndicatorProps {}
-
-const ActivityIndicator = (props: IProps) => (
+const ActivityIndicator = (props: ActivityIndicatorProps) => (
   <View style={styles.FlexCenter}>
     <ActivityIndicatorRN {...props} />
   </View>

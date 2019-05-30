@@ -2,26 +2,25 @@ import React from "react";
 
 import { FlatList } from "react-native";
 
-import { Route } from "../../../types/Route";
+import { IRoute } from "../../../types/Route";
 import BusRoutesItem from "../BusRoutesItem";
 
 interface IProps {
-  routes: Route[];
-  onClickItem: (route: Route) => void;
+  routes: IRoute[];
+  onClickItem: (route: IRoute) => void;
 }
 
-const BusRoutesList = ({ routes, onClickItem }: IProps) => (
-  <FlatList
-    data={routes}
-    renderItem={({ item }) => (
-      <BusRoutesItem
-        key={item.id}
-        onPress={() => onClickItem(item)}
-        route={item.route}
-        routeHour={item.routeHour}
-      />
-    )}
-  />
-);
+const BusRoutesList = ({ routes, onClickItem }: IProps) => {
+  const renderItem = (item: IRoute) => (
+    <BusRoutesItem
+      key={item.id}
+      onPress={() => onClickItem(item)}
+      route={item.route}
+      routeHour={item.routeHour}
+    />
+  );
+
+  return <FlatList data={routes} renderItem={({ item }) => renderItem(item)} />;
+};
 
 export default BusRoutesList;

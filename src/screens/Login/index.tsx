@@ -11,6 +11,19 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "center",
   },
+  // I don't know why is not working
+  // tslint:disable-next-line: object-literal-sort-keys
+  btnWrapper: {
+    marginTop: SPACER * 4,
+  },
+  buttonText: {
+    color: "white",
+    fontSize: 16,
+  },
+  formItem: {
+    marginLeft: 0,
+    paddingBottom: 4,
+  },
   loginWrapper: {
     backgroundColor: COLORS.primary,
     justifyContent: "center",
@@ -20,25 +33,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   logoImage: {
-    width: SPACER * 18,
-    height: SPACER * 18,
-    resizeMode: "contain",
-    justifyContent: "center",
     alignItems: "center",
-  },
-  formItem: {
-    marginLeft: 0,
-    paddingBottom: 4,
+    height: SPACER * 18,
+    justifyContent: "center",
+    resizeMode: "contain",
+    width: SPACER * 18,
   },
   label: {
     color: "white",
-  },
-  btnWrapper: {
-    marginTop: SPACER * 4,
-  },
-  buttonText: {
-    color: "white",
-    fontSize: 16,
   },
 });
 
@@ -59,15 +61,17 @@ class Login extends React.Component<IProps, IState> {
 
     this.state = {
       email: "",
-      password: "",
-      isSubmitting: false,
       isDisabled: true,
+      isSubmitting: false,
+
+      password: "",
     };
   }
 
-  login = () => {};
+  // Todo login method
+  private login = () => 2 + 2;
 
-  render() {
+  public render() {
     const { isDisabled } = this.state;
 
     return (

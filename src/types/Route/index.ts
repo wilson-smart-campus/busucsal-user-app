@@ -1,11 +1,11 @@
-export interface Route {
+export interface IRoute {
   id: string;
   route: string;
   routeHour: string;
-  points: Points[];
+  points: IPoints[];
 }
 
-export interface Points {
+export interface IPoints {
   lat: number;
   lng: number;
   name: string;
