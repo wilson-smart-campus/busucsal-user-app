@@ -1,6 +1,7 @@
 import * as React from "react";
-import MapView from "react-native-maps";
+import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
 import { NavigationScreenProps } from "react-navigation";
+import styles from "../../resources/styles";
 
 export default class BusMap extends React.Component<NavigationScreenProps> {
   constructor(props: NavigationScreenProps) {
@@ -16,6 +17,12 @@ export default class BusMap extends React.Component<NavigationScreenProps> {
       longitudeDelta: 0.0421,
     };
 
-    return <MapView initialRegion={initialRegion} />;
+    return (
+      <MapView
+        provider={PROVIDER_GOOGLE}
+        initialRegion={initialRegion}
+        style={styles.Flex}
+      />
+    );
   }
 }

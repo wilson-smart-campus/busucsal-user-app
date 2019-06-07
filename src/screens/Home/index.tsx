@@ -1,15 +1,13 @@
 import * as React from "react";
 import { SafeAreaView } from "react-native";
 import { NavigationScreenProp } from "react-navigation";
-import BusRoutesItem from "../../components/BusRoutes/BusRoutesItem";
 import Header from "../../components/Header";
 
 import styles from "../../resources/styles";
-import { ProgressBar } from "react-native-paper";
 import ActivityIndicator from "../../components/ActivityIndicator";
 
 export interface IProps {
-  navigation?: NavigationScreenProp<{}>;
+  navigation: NavigationScreenProp<{}>;
 }
 
 export interface IState {
