@@ -1,9 +1,9 @@
-const getSchedule = () => {};
-const getRoute = () => {};
-const getBusLocation = () => {};
+const getSchedule = () => null;
+const getRoute = () => null;
+const getBusLocation = () => null;
 
 export default {
-  getSchedule,
-  getRoute,
   getBusLocation,
+  getRoute,
+  getSchedule,
 };

@@ -17,7 +17,9 @@ export interface IState {
 }
 
 class Home extends React.Component<IProps, IState> {
-  static navigationOptions = ({ navigation }: NavigationScreenProps<{}>) => ({
+  public static navigationOptions = ({
+    navigation,
+  }: NavigationScreenProps<{}>) => ({
     tabBarIcon: <Icon name="bus-clock" size={24} />,
     title: "Roteiros",
   });
