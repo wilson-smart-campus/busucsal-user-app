@@ -1,10 +1,12 @@
 import * as React from "react";
 import { SafeAreaView } from "react-native";
-import { NavigationScreenProp } from "react-navigation";
+import { NavigationScreenProp, NavigationScreenProps } from "react-navigation";
 import Header from "../../components/Header";
 
 import styles from "../../resources/styles";
 import ActivityIndicator from "../../components/ActivityIndicator";
+
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 export interface IProps {
   navigation: NavigationScreenProp<{}>;
@@ -15,6 +17,11 @@ export interface IState {
 }
 
 class Home extends React.Component<IProps, IState> {
+  static navigationOptions = ({ navigation }: NavigationScreenProps<{}>) => ({
+    tabBarIcon: <Icon name="bus-clock" size={24} />,
+    title: "Roteiros",
+  });
+
   constructor(props: IProps) {
     super(props);
     this.state = {
@@ -34,4 +41,5 @@ class Home extends React.Component<IProps, IState> {
     );
   }
 }
+
 export default Home;
