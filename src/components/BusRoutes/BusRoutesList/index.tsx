@@ -7,17 +7,11 @@ import BusRoutesItem from "../BusRoutesItem";
 
 interface IProps {
   routes: IRoute[];
-  onClickItem: (route: IRoute) => void;
 }
 
-const BusRoutesList = ({ routes, onClickItem }: IProps) => {
+const BusRoutesList = ({ routes }: IProps) => {
   const renderItem = (item: IRoute) => (
-    <BusRoutesItem
-      key={item.id}
-      onPress={() => onClickItem(item)}
-      route={item.route}
-      routeHour={item.routeHour}
-    />
+    <BusRoutesItem key={item.id} {...item} />
   );
 
   return <FlatList data={routes} renderItem={({ item }) => renderItem(item)} />;
