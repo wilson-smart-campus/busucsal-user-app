@@ -7,6 +7,7 @@ describe("<BusRoutesItem />", () => {
     onPress: () => "",
     route: "essamsm",
     routeHour: "alguma",
+    points: [],
   });
 
   describe("render", () => {
